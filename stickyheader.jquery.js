@@ -23,10 +23,10 @@ jQuery(document).ready(function ($) {
 		stickyHeader.css('width', tableWidth);
 		var cellWidths = [];
 		for (var i = 0, l = headerCells.length; i < l; i++) {
-			cellWidths[i] = $(headerCells[i]).width();
+			cellWidths[i] = $(headerCells[i]).innerWidth();
 		}
 		for (var i = 0, l = headerCells.length; i < l; i++) {
-			$(stickyHeaderCells[i]).css('width', cellWidths[i]);
+			$(stickyHeaderCells[i]).innerWidth(cellWidths[i]);
 		}
 		
 		var cutoffTop = $(table).offset().top;
